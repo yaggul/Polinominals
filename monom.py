@@ -23,6 +23,11 @@ class Monom:
             return(self.coeff + other.coeff, self.value, self.power)
         else:
             print('Error -> {} is different from {}'.format(self, other))
+    def __eq__(self, other):
+        return self.value+str(self.power) == other.value+str(other.power)
+
+    def __hash__(self):
+        return hash(self.value+str(self.power))
 
     def derivative(self):
         if self.power > 0:
