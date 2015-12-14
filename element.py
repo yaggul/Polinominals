@@ -33,13 +33,13 @@ class Element:
 
     def edit_element(self):
         self.split_element()
-        if not 'coeff' in self.char_dict:
+        if 'coeff' not in self.char_dict:
             self.char_dict['coeff'] = 1
-        if not 'value' in self.char_dict:
+        if 'value' not in self.char_dict:
             self.char_dict['value'] = 'x'
             self.char_dict['power'] = 0
         else:
-            if not 'power' in self.char_dict:
+            if 'power' not in self.char_dict:
                 self.char_dict['power'] = 1
 
     def return_monom(self):
